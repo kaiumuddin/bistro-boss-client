@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita Pizza",
+    "category": "Pizza",
+    "description": "Classic pizza with fresh mozzarella, tomatoes, and basil.",
+    "price": 12.99,
+    "image": "images/margherita-pizza.jpg",
+    "tags": ["popular"]
+  },
+  {
+    "id": 2,
+    "name": "Pepperoni Pizza",
+    "category": "Pizza",
+    "description": "Delicious pepperoni pizza with a blend of cheeses.",
+    "price": 14.99,
+    "image": "images/pepperoni-pizza.jpg",
+    "tags": ["popular", "latest"]
+  },
+  {
+    "id": 3,
+    "name": "Caesar Salad",
+    "category": "Salad",
+    "description": "Crisp romaine lettuce, croutons, and Caesar dressing.",
+    "price": 9.99,
+    "image": "images/caesar-salad.jpg",
+    "tags": ["latest"]
+  },
+  {
+    "id": 4,
+    "name": "Spaghetti Carbonara",
+    "category": "Pasta",
+    "description": "Classic Italian pasta with pancetta, egg, and Parmesan cheese.",
+    "price": 13.99,
+    "image": "images/spaghetti-carbonara.jpg",
+    "tags": ["popular"]
+  },
+  {
+    "id": 5,
+    "name": "Grilled Chicken Sandwich",
+    "category": "Sandwich",
+    "description": "Grilled chicken breast with lettuce, tomato, and mayo on a brioche bun.",
+    "price": 10.99,
+    "image": "images/grilled-chicken-sandwich.jpg",
+    "tags": []
+  },
+  {
+    "id": 6,
+    "name": "Cheeseburger",
+    "category": "Burgers",
+    "description": "Juicy beef patty with cheddar cheese, lettuce, tomato, and onion.",
+    "price": 11.99,
+    "image": "images/cheeseburger.jpg",
+    "tags": ["popular"]
+  },
+  {
+    "id": 7,
+    "name": "Margarita",
+    "category": "Drinks",
+    "description": "Refreshing cocktail made with tequila, lime juice, and orange liqueur.",
+    "price": 8.99,
+    "image": "images/margarita.jpg",
+    "tags": []
+  },
+  {
+    "id": 8,
+    "name": "Chocolate Lava Cake",
+    "category": "Desserts",
+    "description": "Warm chocolate cake with a gooey center, served with vanilla ice cream.",
+    "price": 7.99,
+    "image": "images/chocolate-lava-cake.jpg",
+    "tags": ["latest"]
+  },
+  {
+    "id": 9,
+    "name": "Espresso",
+    "category": "Drinks",
+    "description": "Rich and bold espresso shot made from freshly ground beans.",
+    "price": 3.99,
+    "image": "images/espresso.jpg",
+    "tags": []
+  },
+  {
+    "id": 10,
+    "name": "Garlic Bread",
+    "category": "Appetizers",
+    "description": "Toasted bread topped with garlic butter and herbs.",
+    "price": 4.99,
+    "image": "images/garlic-bread.jpg",
+    "tags": ["popular", "latest"]
+  }
+]

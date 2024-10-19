@@ -1,8 +1,17 @@
+import { Helmet } from "react-helmet-async";
+import Banner from "./Banner/Banner";
+import Category from "./Category/Category";
 
-const Home = () => {
+const Home = ({ title }) => {
   return (
-    <div>This is Home</div>
-  )
-}
+    <>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      {/* <Banner/> */}
+      <Category />
+    </>
+  );
+};
 
-export default Home
+export default Home;

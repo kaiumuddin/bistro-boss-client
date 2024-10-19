@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const About = () => {
+const About = ({ title }) => {
   return (
-    <div>About</div>
-  )
-}
+    <>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      <h2>About</h2>
+    </>
+  );
+};
 
-export default About
+export default About;
