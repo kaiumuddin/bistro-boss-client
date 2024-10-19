@@ -9,7 +9,8 @@ const Header = () => {
         {/* Logo */}
         <div className="text-2xl font-bold uppercase">
           <Link to="/" className="hover:text-secondary transition-colors">
-            Bistro Boss
+            <span className="block md:hidden">BB</span>
+            <span className="hidden md:block">Bistro Boss</span>
           </Link>
         </div>
 

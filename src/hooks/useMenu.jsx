@@ -1,24 +1,30 @@
-import { useEffect } from "react";
-import { useState } from "react";
+// src/hooks/useMenu.js
 
-const useMenu = () => {
-  const [menu, setMenu] = useState([]);
-  const [loading, setLoading] = useState(true);
+import useFetchMenu from "./useFetchMenu";
+import useMenuFilter from "./useMenuFilter";
 
-  useEffect(() => {
-    fetch("/menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setMenu(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching menu data:", error);
-        setLoading(false);
-      });
-  }, []);
+const useMenu = (url = "/menu.json") => {
+  const { menu, loading } = useFetchMenu(url);
+  const {
+    filteredMenu,
+    categories,
+    tags,
+    categoryFilter,
+    setCategoryFilter,
+    tagFilter,
+    setTagFilter,
+  } = useMenuFilter(menu);
 
-  return { menu, loading };
+  return {
+    menu: filteredMenu,
+    loading,
+    categories,
+    tags,
+    categoryFilter,
+    setCategoryFilter,
+    tagFilter,
+    setTagFilter,
+  };
 };
 
 export default useMenu;
