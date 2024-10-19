@@ -1,12 +1,11 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const About = ({ title }) => {
+  usePageTitle("About Us");
+
   return (
     <>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
       <h2>About</h2>
     </>
   );

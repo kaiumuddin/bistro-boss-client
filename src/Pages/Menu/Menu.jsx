@@ -1,10 +1,11 @@
 // src/components/Menu.jsx
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import useMenu from "../../hooks/useMenu";
 import CategoryFilter from "./CategoryFilter/CategoryFilter";
 import TagFilter from "./TagFilter/TagFilter";
 import MenuItem from "./MenuItem/MenuItem";
+import Loading from "../../Components/Loading/Loading";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const Menu = ({ title }) => {
   const {
@@ -18,22 +19,26 @@ const Menu = ({ title }) => {
     setTagFilter,
   } = useMenu();
 
+  // Example: Dynamic title based on filters
+  const dynamicTitle = `${
+    categoryFilter !== "All" ? categoryFilter : "All Items"
+  }${
+    tagFilter
+      ? ` - ${tagFilter.charAt(0).toUpperCase() + tagFilter.slice(1)}`
+      : ""
+  }`;
+
+  // Use the dynamic title in the hook
+  usePageTitle(dynamicTitle);
+
   if (loading) {
-    return (
-      <div className="container mx-auto px-4 py-8">
-        <p className="text-lg text-gray-500">Loading menu...</p>
-      </div>
-    );
+    return <Loading message="Loading menu..." />;
   }
 
   return (
     <>
-      <Helmet>
-        <title>{title} | My Restaurant</title>
-      </Helmet>
-
       <div className="container mx-auto py-8 px-4 md:px-0">
-        <div className="flex flex-col items-center justify-betweeen md:flex-row gap-2 mb-6">
+        <div className="flex flex-col items-center justify-between md:flex-row gap-2 mb-6">
           <h2 className="flex flex-grow text-3xl font-bold text-primary">
             Our Menu
           </h2>

@@ -1,13 +1,11 @@
-import { Helmet } from "react-helmet-async";
 import Banner from "./Banner/Banner";
 import Category from "./Category/Category";
+import usePageTitle from "../../hooks/usePageTitle";
 
 const Home = ({ title }) => {
+  usePageTitle("Home");
   return (
     <>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
       {/* <Banner/> */}
       <Category />
     </>
